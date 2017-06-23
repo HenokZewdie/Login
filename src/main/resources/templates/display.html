@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table class="table table-hover" border="1">
+
+    <tr>
+        <th>User Name</th>
+        <th>Password</th>
+
+    </tr>
+    <div th:each="test : ${values}">
+
+        <tr>
+            <td><p th:text = "${test.uName}"></p></td>
+            <td th:text = "${test.password}"></td>
+
+
+            <!--<td th:text = "${#dates.format(mylink.date, 'MMM-dd-yyyy')}"></td>  #dates.format(sprint.releaseDate, 'dd-MMM-yyyy')-->
+        </tr>
+    </div>
+</table>
+</body>
+</html>
